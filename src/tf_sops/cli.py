@@ -9,7 +9,7 @@ SOPS_ENC_CMD = ["sops", "encrypt", "--input-type", "binary", "--output-type", "b
 SOPS_DEC_CMD = ["sops", "decrypt", "--input-type", "binary", "--output-type", "binary", "--filename-override", "tofu.tfstate"]
 
 def app():
-    parser = argparse.ArgumentParser(prog='My External Encryption Method')
+    parser = argparse.ArgumentParser(prog='tf-sops')
     parser.add_argument('--encrypt', action='store_true')
     parser.add_argument('--decrypt', action='store_true')
     parser.add_argument('--test', action='store_true')
